@@ -65,3 +65,21 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
+main { 
+text-align: center;
+padding: 20px
+}
+
+.produkt {
+    padding: 20px
+    margin: 20px auto;
+    max-width: 800px 
+    border-radius: 10px;
+}
+
+#lemon-burst {
+    background-color: var(--neon-green);
+}
+
+#b
