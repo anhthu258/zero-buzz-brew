@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-grey: #222222;
+    --beige: #F6EDE5;
+    --darker-beige: #DDD4D1;
+    --pink: #FD0062;
+    --light-pink: #FECBEF;
+    --purple: #5642BA;
+    --neon-green: #CEFF00;
+    --light-green: ##f1ffb1;
+}
+
+#logo img{
+    width: 15rem;
+}
+
+nav{
+    background-color: var(--dark-grey);
+    height: 2.8rem;
+    padding-right: 1.1rem;
+}
+
+nav ul, li{
+    list-style: none;
+}
+
+nav ul{
+    width: 100%;
+    text-align: right;
+}
+
+nav li{
+    display: inline-block;
+    position: relative;
+    background-color: var(--beige);
+    color: var(--dark-grey);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+nav a{
+    display: block;
+    line-height: 2.8rem;
+    padding: 0 0.8rem;
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+}
+
+nav li a:hover{
+    color: var(--dark-grey);
+    background-color: var(--darker-beige);
+    border-radius: 0.5rem;
+}
+
+header{
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background: #f9f3eb;
+}
+
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group input {
+    width: 48%;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.newsletter label {
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back {
+    background-color: #ffcccb;
+}
+
+.continue {
+    background-color: #d4edda;
+}
+
+.cart-section {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e8c7a0;
+}
+
+img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.buzzy {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+}
