@@ -37,6 +37,10 @@ nav ul{
 nav li{
     display: inline-block;
     position: relative;
+    background-color: var(--beige);
+    color: var(--dark-grey);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 nav a{
@@ -44,22 +48,27 @@ nav a{
     line-height: 2.8rem;
     padding: 0 0.8rem;
     text-decoration: none;
-    color: var(--beige);
+    color: var(--dark-grey);
     font-size: 1.5rem;
 }
 
 nav li a:hover{
     color: var(--dark-grey);
-    background-color: var(--beige);
+    background-color: var(--darker-beige);
+    border-radius: 0.5rem;
 }
 
 header{
     background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #header-sky{
-    width: fit-content;
-    height: 2rem;
+    width: 10rem;
+    height: 1.5rem;
 }
 
 #find-buzzy{
