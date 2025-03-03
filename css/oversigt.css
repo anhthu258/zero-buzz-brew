@@ -68,13 +68,13 @@ header{
 
 main { 
 text-align: center;
-padding: 20px
+padding: 20px;
 }
 
 .produkt {
-    padding: 20px
+    padding: 20px;
     margin: 20px auto;
-    max-width: 800px 
+    max-width: 800px; 
     border-radius: 10px;
 }
 
