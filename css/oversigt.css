@@ -82,4 +82,20 @@ padding: 20px
     background-color: var(--neon-green);
 }
 
-#b
+#blueberry-twister {
+background-color: var(--purple);
+color: white;
+}
+
+#strawberry-punch {
+    background-color: var(--pink);
+}
+
+#absolut-zero {
+    background-color: var(--darker-beige);
+}
+
+.produkt img {
+    width: 150px;
+    margin-top: 10px; 
+}
