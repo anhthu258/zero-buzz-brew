@@ -65,3 +65,116 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background: #f9f3eb;
+}
+
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group input {
+    width: 48%;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.newsletter label {
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back {
+    background-color: #ffcccb;
+}
+
+.continue {
+    background-color: #d4edda;
+}
+
+.cart-section {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e8c7a0;
+}
+
+img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.buzzy {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+}
