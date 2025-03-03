@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --dark-grey: #231A1B;
     --beige: #F6EDE5;
@@ -7,4 +13,16 @@
     --purple: #5642BA;
     --neon-green: #CEFF00;
     --light-green: ##f1ffb1;
+}
+
+#logo img{
+    width: 15rem;
+}
+
+header{
+    background-color: var(--dark-grey);
+}
+
+#find-buzzy{
+    background-image: url(../img/header.png);
 }
