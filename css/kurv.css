@@ -72,7 +72,7 @@ body {
 
 .checkout-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto;
     background: #f9f3eb;
 }
