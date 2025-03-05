@@ -168,8 +168,8 @@ footer {
     background-color: var(--dark-grey);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     color: var(--beige);
     padding: 1rem;
     height: 20vh;
@@ -185,7 +185,7 @@ footer h2 {
 }
 
 footer img {
-    width: 10rem;
+    width: 12.5rem;
 }
 
 .social-media {
@@ -196,22 +196,21 @@ footer img {
 }
 
 .social-media img {
-    width: 5rem;
+    width: 6rem;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 992px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Change to single column */
-        gap: 20px; /* Adjust gap as needed */
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .grid-item {
-        width: 100%; /* Make grid items take full width */
-        height: auto; /* Adjust height as needed */
+        width: 100%;
+        height: auto;
     }
 
     .info-container {
-        width: 100%; /* Make info container take full width */
+        width: 100%;
     }
 }
