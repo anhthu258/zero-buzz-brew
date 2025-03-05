@@ -72,21 +72,25 @@ nav li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 100%;
-    height: 25rem;
+    height: 20rem;
 }
 
 #rabat h1 {
     color: var(--dark-grey);
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
-    padding-top: 11rem;
+    padding-top: 8rem;
+}
+
+.main-wrapper {
+    min-height: auto;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 100%;
     margin: 0;
     overflow: hidden;
     position: relative;
@@ -193,4 +197,21 @@ footer img {
 
 .social-media img {
     width: 5rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Change to single column */
+        gap: 20px; /* Adjust gap as needed */
+    }
+
+    .grid-item {
+        width: 100%; /* Make grid items take full width */
+        height: auto; /* Adjust height as needed */
+    }
+
+    .info-container {
+        width: 100%; /* Make info container take full width */
+    }
 }
