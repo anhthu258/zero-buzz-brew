@@ -99,3 +99,33 @@ color: white;
     width: 150px;
     margin-top: 10px; 
 }
+
+footer{
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--beige);
+    padding: 1rem;
+    height: 20vh;
+}
+
+footer a{
+    color: var(--beige);
+}
+
+footer img{
+    width: 10rem;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media img{
+    width: 5rem;
+}
