@@ -58,6 +58,16 @@ nav li a:hover{
     border-radius: 0.5rem;
 }
 
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.nav-container img {
+    height: 3.5rem;
+}
+
 header{
     background-color: var(--dark-grey);
     display: flex;
@@ -65,16 +75,28 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../img/kurvbaggrund.jpg'); /* Sti til baggrundsbilledet */
-    background-size: cover; /* Dækker hele siden */
-    background-position: center; /* Centrerer baggrunden */
-    background-repeat: no-repeat; /* Undgår gentagelse */
-    background-attachment: fixed; /* Sikrer, at billedet følger med ved scrolling */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Sørger for, at body fylder hele højden af siden */
+    background: none;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background-image: url('../img/kurvbaggrund.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .checkout-container {
@@ -83,90 +105,90 @@ body {
     margin: auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: transparent; /* Fjern baggrundsfarven */
-    box-shadow: none; /* Fjern skyggen, hvis den ikke er nødvendig */
-    margin-top: 20px; /* Juster efter behov */
+    background-color: transparent; 
+    box-shadow: none; 
+    margin-top: 20px; 
 }
 
 .info-section, .cart-section {
-    padding: 0; /* Fjern padding fra containeren, da den nu håndteres internt */
-    overflow: hidden; /* Sørger for, at indholdet ikke overskrider containeren */
+    padding: 0; 
+    overflow: hidden; 
 }
 
 .info-section {
-    background-color: #F6EDE5; /* Beige farve */
-    width: 48%; /* Juster bredden efter behov */
-    margin-right: 60px; /* Mindre mellemrum til højre */
-    padding: 30px; /* Mere padding for at skabe luft */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Let skyggeeffekt */
+    background-color: var(--beige); 
+    width: 48%; 
+    margin-right: 60px; 
+    padding: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .info-section h2 {
-    margin-bottom: 20px; /* Mere plads under overskriften */
-    font-size: 1.5em; /* Større skriftstørrelse til overskriften */
+    margin-bottom: 20px; 
+    font-size: 1.5em; 
 }
 
 .info-section label {
-    display: block; /* Sæt labels på hver deres linje */
-    margin-bottom: 10px; /* Mere plads mellem labels */
-    font-weight: bold; /* Gør labels fed */
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
 }
 
 .info-section input {
-    width: 100%; /* Fyld hele bredden */
-    padding: 10px; /* Mere padding i inputfelter */
-    margin-bottom: 15px; /* Mere plads mellem inputfelter */
-    border: 1px solid #ccc; /* Fin border til inputfelter */
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
 }
 
 .info-section .form-group {
     display: flex;
-    gap: 10px; /* Afstand mellem inputfelter i form-group */
+    gap: 10px; 
 }
 
 .info-section .form-group input {
-    flex: 1; /* Fyld lige meget plads i form-group */
+    flex: 1; 
 }
 
 .info-section .newsletter {
-    margin-top: 20px; /* Mere plads over nyhedsbrev-checkboxen */
+    margin-top: 20px; 
 }
 
 .info-section .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; /* Mere plads over knapperne */
+    margin-top: 20px; 
 }
 
 .info-section button {
-    padding: 10px 20px; /* Større padding på knapper */
+    padding: 10px 20px; 
     border: none;
     cursor: pointer;
-    font-size: 1em; /* Større skriftstørrelse på knapper */
+    font-size: 1em; 
 }
 
 .info-section .back {
-    background-color: #ffcccb; /* Lyserød baggrund til Tilbage-knappen */
+    background-color: #ffcccb; 
 }
 
 .info-section .continue {
-    background-color: #d4edda; /* Lys grøn baggrund til Fortsæt-knappen */
+    background-color: #d4edda; 
 }
 
 .cart-section {
-    background-color: transparent; /* Fjern baggrundsfarven fra containeren */
-    width: 48%; /* Juster bredden efter behov */
-    margin-left: 10px; /* Mindre mellemrum til venstre */
+    background-color: transparent; 
+    width: 48%; 
+    margin-left: 10px; 
 }
 
 .cart-top {
-    background-color: white; /* Hvid baggrund for toppen */
-    padding: 20px; /* Tilføj padding */
+    background-color: white; 
+    padding: 20px; 
 }
 
 .cart-bottom {
-    background-color: #D9D9D9; /* Grålig baggrund for bunden */
-    padding: 20px; /* Tilføj padding */
+    background-color: #D9D9D9; 
+    padding: 20px; 
 }
 
 .summary p {
@@ -207,20 +229,20 @@ input {
 .newsletter {
     display: flex;
     align-items: center;
-    margin-top: 20px; /* Mere plads over nyhedsbrev-sektionen */
+    margin-top: 20px; 
 }
 
 .newsletter input[type="checkbox"] {
-    margin-right: 10px; /* Afstand mellem checkbox og label */
-    width: 20px; /* Størrelse på checkbox */
-    height: 20px; /* Størrelse på checkbox */
-    cursor: pointer; /* Gør det tydeligt, at det er klikbart */
+    margin-right: 10px; 
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer; 
 }
 
 .newsletter label {
-    margin-left: 5px; /* Afstand mellem checkbox og label */
-    font-size: 1em; /* Skriftstørrelse på label */
-    cursor: pointer; /* Gør det tydeligt, at det er klikbart */
+    margin-left: 5px; 
+    font-size: 1em; 
+    cursor: pointer; 
 }
 
 .buttons {
@@ -285,7 +307,42 @@ img {
 
 .buzzy {
     position: absolute;
-    bottom: 90px;
+    bottom: 170px;
     right: 320px;
     width: 100px;
+}
+
+footer {
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--beige);
+    padding: 1rem;
+    height: 20vh;
+}
+
+footer a {
+    color: var(--beige);
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+footer img {
+    width: 12.5rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media img {
+    width: 6rem;
 }

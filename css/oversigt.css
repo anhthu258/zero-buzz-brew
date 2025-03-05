@@ -100,25 +100,11 @@ main {
 }
 
 .produkt img {
-    width: 550px;
+    width: 400px;
     height: auto;
     margin: 0 20px;
 }
 
-/* Generelle styles for tekst i produkter */
-.produkt h2 {
-    font-size: 2.5rem; /* Ens for alle overskrifter */
-    line-height: 1.2;  /* Ens for alle overskrifter */
-    margin-bottom: 10px; /* Ens for alle overskrifter */
-}
-
-.produkt p {
-    font-size: 1.0rem; /* Ens for alle afsnit */
-    line-height: 1.5;  /* Ens for alle afsnit */
-    text-align: left;  /* Ens for alle afsnit */
-}
-
-/* Baggrundsfarver for hvert produkt */
 #lemon-burst {
     background-color: var(--neon-green);
     color: var(--dark-grey);
@@ -127,6 +113,18 @@ main {
 #blueberry-twister {
     background-color: var(--purple);
     color: var(--beige);
+}
+
+#blueberry-twister h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+#blueberry-twister p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
 #strawberry-punch {
