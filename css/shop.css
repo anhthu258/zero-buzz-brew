@@ -69,7 +69,7 @@ nav li a:hover {
 .nav-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
 }
 
 .nav-container img {
