@@ -66,6 +66,16 @@ nav li a:hover {
     border-radius: 0.5rem;
 }
 
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-container img {
+    height: 3.5rem;
+}
+
 #rabat {
     background-image: url(../img/rabat-banner.png);
     background-size: cover;
