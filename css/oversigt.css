@@ -5,12 +5,17 @@
 }
 
 @font-face {
-    font-family: Hello-kooky;
-    src: url('/fonts/kookyCloud/Hello-KookyCloud-ExtraKooky.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
 
+@font-face {
+    font-family: kookyCloud-extra;
+    src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
+}
+body {
+    font-family: bahnscript, sans-serif;
+}
 :root {
     --dark-grey: #222222;
     --beige: #F6EDE5;
@@ -130,10 +135,11 @@ main {
 
 .produkt:hover h2,
 .produkt:hover p {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 196, 0);
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     opacity: 1;
+    font-weight: bold;
 }
 
 #lemon-burst {
