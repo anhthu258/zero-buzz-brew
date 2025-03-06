@@ -5,17 +5,12 @@
 }
 
 @font-face {
-    font-family: kookyCloud;
-    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
+    font-family: Hello-kooky;
+    src: url('/fonts/kookyCloud/Hello-KookyCloud-ExtraKooky.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: kookyCloud-extra;
-    src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
-}
-body {
-    font-family: bahnscript, sans-serif;
-}
 :root {
     --dark-grey: #222222;
     --beige: #F6EDE5;
@@ -128,18 +123,24 @@ main {
     margin: 0 20px;
 }
 
-.produkt h2,
+.produkt h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
 .produkt p {
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
 .produkt:hover h2,
 .produkt:hover p {
-    color: rgb(255, 196, 0);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     opacity: 1;
-    font-weight: bold;
 }
 
 #lemon-burst {
@@ -150,18 +151,6 @@ main {
 #blueberry-twister {
     background-color: var(--purple);
     color: var(--beige);
-}
-
-#blueberry-twister h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-
-#blueberry-twister p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    text-align: left;
 }
 
 #strawberry-punch {
@@ -187,7 +176,7 @@ main {
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/strawberryhover.webp');
+    background-image: url('/img/hover-strawberry.png');
     background-size: cover;
     background-position: center;
 }
