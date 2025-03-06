@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Hello-kooky;
+    src: url('/fonts/kookyCloud/Hello-KookyCloud-ExtraKooky.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --dark-grey: #222222;
     --beige: #F6EDE5;
@@ -89,6 +96,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background 0.3s ease;
 }
 
 .produkt:first-child {
@@ -113,6 +121,19 @@ main {
     width: 400px;
     height: auto;
     margin: 0 20px;
+}
+
+.produkt h2,
+.produkt p {
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.produkt:hover h2,
+.produkt:hover p {
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 #lemon-burst {
@@ -145,6 +166,30 @@ main {
 #absolut-zero {
     background-color: var(--darker-beige);
     color: var(--dark-grey);
+}
+
+#lemon-burst:hover {
+    background-image: url('/img/hover-lemon.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#blueberry-twister:hover {
+    background-image: url('/img/hover-blueberry.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#strawberry-punch:hover {
+    background-image: url('/img/strawberryhover.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#absolut-zero:hover {
+    background-image: url('/img/hover-zero.png');
+    background-size: cover;
+    background-position: center;
 }
 
 footer {
