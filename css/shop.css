@@ -103,7 +103,6 @@ nav li a:hover {
     width: 35px;
     height: 40px;
     color: var(--dark-grey);
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,6 +130,12 @@ nav li a:hover {
 
 .main-wrapper {
     min-height: auto;
+}
+
+.container{
+    max-width: 100%;
+    margin: auto;
+    transition: transform 1s;
 }
 
 main {
@@ -235,6 +240,7 @@ h2 {
     background-image: url('../img/buzzy-dark-30.png');
     background-repeat: repeat-y;
     background-size: contain;
+    z-index: 2;
 }
 
 #cartHeader{
