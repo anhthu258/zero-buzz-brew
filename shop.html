@@ -10,34 +10,36 @@
     <title>Zero Buzz Brew - Oversigt</title>
     <link rel="stylesheet" href="./css/shop.css">
 </head>
-    <header>
-        <div id="logo">
-            <a href="index.html">
-                <img src="./img/buzzy-light.png" alt="Zero Buzz Brew Logo i beige">
-            </a>
-        </div>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="oversigt.html">OVERSIGT</a></li>
-                    <li><a href="shop.html">SHOP</a></li>
-                </ul>
-            </nav>
-            <div class="iconKurv">
-                <img src="./img/kurv-ikon.png" alt="ikon">
-                <div class="totalQuantity">0</div>
-            </div>
-        </div>
-    </header>
-
-    <article id="rabat">
-        <h1>
-            UDVALGTE VARER 20%
-        </h1>
-    </article>
 
     <body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="./img/buzzy-light.png" alt="Zero Buzz Brew Logo i beige">
+                </a>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="oversigt.html">OVERSIGT</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                    </ul>
+                </nav>
+                <div class="iconKurv">
+                    <img src="./img/kurv-ikon.png" alt="ikon">
+                    <div class="totalQuantity">0</div>
+                </div>
+            </div>
+        </header>
+    
+        <article id="rabat">
+            <h1>
+                UDVALGTE VARER 20%
+            </h1>
+        </article>
+
         <div class="main-wrapper">
             <main>
                 <div class="grid-container">
@@ -103,9 +105,15 @@
                 </div>
             </main>
         </div>
+</div>
 
         <aside class="cart">
-            <h2>KURV</h2>
+            <section id="cartHeader">
+                <h2>KURV</h2>
+                <div class="close">
+                    <img src="./img/cross.png" alt="">
+                </div>
+            </section>
             <section class="listCart">
                 <div class="item">
                     <img src="./img/lemonburst.png" alt="Zero Buzz Brew Lemon Burst">
@@ -157,7 +165,6 @@
                 </div>
             </section>
             <section class="buttons">
-                <div class="close">LUKKE</div>
                 <div class="checkout">
                     <a href="kurv.html">BETAL</a>
                 </div>

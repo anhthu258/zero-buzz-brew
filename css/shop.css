@@ -103,7 +103,6 @@ nav li a:hover {
     width: 35px;
     height: 40px;
     color: var(--dark-grey);
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,14 +121,21 @@ nav li a:hover {
 
 #rabat h1 {
     font-family: kookyCloud;
+    font-weight: 100;
     color: var(--dark-grey);
-    font-size: 3rem;
+    font-size: 5.5rem;
     text-align: center;
     padding-top: 8rem;
 }
 
 .main-wrapper {
     min-height: auto;
+}
+
+.container{
+    max-width: 100%;
+    margin: auto;
+    transition: transform 1s;
 }
 
 main {
@@ -211,6 +217,7 @@ h2 {
     border: none;
     margin: 1rem 0;
     background-color: var(--light-green);
+    cursor: pointer;
 }
 
 .info-container button:hover {
@@ -230,9 +237,29 @@ h2 {
     grid-template-rows: 50px 1fr 50px;
     gap: 20px;
     transform: right 1s;
+    background-image: url('../img/buzzy-dark-30.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+    z-index: 2;
+}
+
+#cartHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 80px;
+}
+
+#cartHeader img{
+    width: 50px;
+    cursor: pointer;
 }
 
 .cart h2{
+    font-family: kookyCloud;
+    font-weight: 50;
+    font-size: 60px;
     color: var(--dark-grey);
     padding: 20px;
     background-color: white;
@@ -284,24 +311,20 @@ h2 {
     width: 0;
 }
 
-.cart .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-}
-
 .cart .buttons div{
     background-color: var(--darker-beige);
+    height: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-weight: bold;
     cursor: pointer;
+    justify-content: flex-end;
 }
 
 .cart .buttons a{
     color: var(--dark-grey);
     text-decoration: none;
+    padding: 15px;
 }
 
 .cart .buttons .checkout{
