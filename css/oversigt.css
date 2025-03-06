@@ -5,6 +5,12 @@
 }
 
 h1, h2, h3 {
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf)
+}
+p{
+    font-family: kookycloud;
+    src: url(../fonts/kookyCloud/Hello-KookyCloud.otf);
 }
 
 @font-face {
