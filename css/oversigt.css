@@ -201,25 +201,26 @@ main {
 }
 
 #lemon-burst:hover {
-    background-image: url('/img/hover-lemon.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
 
 #blueberry-twister:hover {
-    background-image: url('/img/hover-blueberry.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/strawberryhover.webp');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
+    opacity: 90%;
 }
 
 #absolut-zero:hover {
-    background-image: url('/img/hover-zero.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
