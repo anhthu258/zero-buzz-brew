@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: kookyCloud;
+    src: url(../fonts/Hello-KookyCloud.otf);
+}
+
+@font-face {
+    font-family: kookyCloud-extra;
+    src: url(./fonts/Kooky-Extra.ttf);
+}
+
 body {
     font-family: bahnscript, sans-serif;
 }
@@ -111,6 +121,7 @@ nav li a:hover {
 }
 
 #rabat h1 {
+    font-family: kookyCloud;
     color: var(--dark-grey);
     font-size: 3rem;
     text-align: center;
