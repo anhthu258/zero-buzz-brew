@@ -138,7 +138,7 @@ main {
 .produkt:hover h2,
 .produkt:hover p {
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Mere tydelig skygge */
     transform: scale(1.1);
     opacity: 1;
 }
@@ -176,7 +176,7 @@ main {
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/hover-strawberry.png');
+    background-image: url('/img/gradiant2.png');
     background-size: cover;
     background-position: center;
 }
