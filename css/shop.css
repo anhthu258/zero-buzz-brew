@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
+}
+
+@font-face {
+    font-family: kookyCloud-extra;
+    src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
+}
+
+body {
+    font-family: bahnscript, sans-serif;
+}
+
 :root {
     --dark-grey: #222222;
     --beige: #F6EDE5;
@@ -107,6 +121,7 @@ nav li a:hover {
 }
 
 #rabat h1 {
+    font-family: kookyCloud;
     color: var(--dark-grey);
     font-size: 3rem;
     text-align: center;
@@ -167,6 +182,14 @@ main::before {
 
 h2 {
     font-size: 1.5rem;
+}
+
+.rabatPris{
+    text-decoration: line-through;
+}
+
+.pris{
+    color: var(--pink);
 }
 
 .info-container {

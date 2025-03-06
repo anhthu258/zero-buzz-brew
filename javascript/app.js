@@ -15,5 +15,5 @@ iconKurv.addEventListener('click', () => {
 close.addEventListener('click', () => {
     cart.style.right = '-100%';
         container.style.transform = 'translateX(0)';
-    })
+})
 
