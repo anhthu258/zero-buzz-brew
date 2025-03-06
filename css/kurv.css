@@ -96,12 +96,6 @@ header{
     justify-content: space-between;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: none;
-    min-height: 100vh;
-    position: relative;
-}
 
 body::before {
     content: "";
@@ -365,4 +359,29 @@ footer img {
 
 .social-media img {
     width: 6rem;
+}
+#toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.toast-visible {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 20px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 20px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }
