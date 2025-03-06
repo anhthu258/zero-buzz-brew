@@ -3,10 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 h1, h2, h3 {
-
 }
-
 
 @font-face {
     font-family: kookyCloud;
@@ -17,7 +16,6 @@ h1, h2, h3 {
     font-family: kookyCloud-extra;
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
-
 
 :root {
     --dark-grey: #222222;
@@ -143,12 +141,37 @@ main {
     text-align: left;
 }
 
-.produkt:hover h2,
-.produkt:hover p {
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 8px #FD0062; /* Mere tydelig skygge */
+.produkt h2,
+.produkt p {
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#lemon-burst:hover h2,
+#lemon-burst:hover p {
+    color: #000000;
+    text-shadow: 2px 2px 8px #CEFF00;
     transform: scale(1.1);
-    opacity: 1;
+}
+
+#blueberry-twister:hover h2,
+#blueberry-twister:hover p {
+    color: #000000;
+    text-shadow: 2px 2px 8px #5642BA;
+    transform: scale(1.1);
+}
+
+#strawberry-punch:hover h2,
+#strawberry-punch:hover p {
+    color: #000000;
+    text-shadow: 2px 2px 8px #FD0062;
+    transform: scale(1.1);
+}
+
+#absolut-zero:hover h2,
+#absolut-zero:hover p {
+    color: #000000;
+    text-shadow: 2px 2px 8px #DDD4D1;
+    transform: scale(1.7);
 }
 
 #lemon-burst {
