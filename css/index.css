@@ -19,6 +19,10 @@
     width: 15rem;
 }
 
+body{
+    background-image: url(../img/gradiant.png);
+    background-size: cover;
+}
 nav{
     background-color: var(--dark-grey);
     height: 2.8rem;
@@ -79,10 +83,14 @@ header{
 #header-sky{
     width: 10rem;
     height: 1.5rem;
+    
+}
+#header-sky img{
+    width: 118.95rem;
+    
 }
 
 #find-buzzy{
-    background-image: url(../img/gradient.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
