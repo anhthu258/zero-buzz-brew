@@ -3,13 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1, h2, h3 {
+
+}
+
 
 @font-face {
-    font-family: Hello-kooky;
-    src: url('/fonts/kookyCloud/Hello-KookyCloud-ExtraKooky.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
+
+@font-face {
+    font-family: kookyCloud-extra;
+    src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
+}
+
 
 :root {
     --dark-grey: #222222;
@@ -137,8 +145,8 @@ main {
 
 .produkt:hover h2,
 .produkt:hover p {
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Mere tydelig skygge */
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px #FD0062; /* Mere tydelig skygge */
     transform: scale(1.1);
     opacity: 1;
 }
@@ -176,7 +184,7 @@ main {
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/gradiant2.png');
+    background-image: url('/img/strawberryhover.webp');
     background-size: cover;
     background-position: center;
 }
