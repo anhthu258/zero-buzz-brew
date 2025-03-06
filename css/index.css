@@ -16,12 +16,12 @@
     --light-green: #f1ffb1;
     
     /*Dåse position 1*/
-    --item1-transform: translate(-80%, 5%) scale(1.5);
+    --item1-transform: translate(-90%, 5%) scale(1.5) rotate(-40deg);
     --item1-filter: blur(5px);
     --item1-z-index: 11;
-    --item1-opacity: 0.8;
+    --item1-opacity: 0;
     /*Dåse position 2*/
-    --item2-transform: translate(0,0);
+    --item2-transform: translate(-10%,0) scale(1.2) rotate(-20deg);
     --item2-filter: blur(0);
     --item2-z-index: 10;
     --item2-opacity: 1;
@@ -114,7 +114,7 @@ header{
     
 }
 #header-sky img{
-    width: 108.1rem;
+    width: 99.1vw;
     
 }
 
@@ -211,6 +211,7 @@ footer img {
     width: 70%;
     height: 100%;
     font-size: 15px;
+
 }
 
 .karousel .list .item img{
@@ -229,9 +230,10 @@ footer img {
 
 .karousel .list .item .intro{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100%;
+    transform: translateY(50%) rotate(20deg);
     width: 400px;
+    right: 10%;
     opacity: 0;
     pointer-events: none;
 }
@@ -289,14 +291,13 @@ footer img {
     /*Navigation til karousel*/
 .arrows{
     position: absolute;
-    bottom: 10px;
-    width: 114px;
-    max-width: 50%;
-    transform: translatex(-50%);
+    bottom: -8rem;
+    width: 20rem;
+    transform: translatex(0%);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 100;
+    right: 50%;
 }
 
 .arrows #prev, .arrows #next{
@@ -371,54 +372,65 @@ padding: 5px 0 ;
 }
 
 /* next click effect*/
-.karousel.next .list .item:nth-child(1){
-    animation: positionItem2 0.5s ease-in-out 1 forwards;
+.karousel.next .item:nth-child(1){
+    animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
 }
-
-@keyframes positionItem2{
+@keyframes transformFromPosition2{
     from{
         transform: var(--item2-transform);
         filter: var(--item2-filter);
-        z-index: var(--item2-z-index);
-        opacity: var(--item2-opacity);  
+        opacity: var(--item2-opacity);
     }
 }
-
-.karousel.next .list .item:nth-child(2){
-    animation: positionItem3 0.7s ease-in-out 1 forwards;
+.karousel.next .item:nth-child(2){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
 }
-
-@keyframes positionItem3{
+@keyframes transformFromPosition3{
     from{
         transform: var(--item3-transform);
         filter: var(--item3-filter);
-        z-index: var(--item3-z-index);
-        opacity: var(--item3-opacity);  
+        opacity: var(--item3-opacity);
     }
 }
-
-.karousel.next .list .item:nth-child(3){
-    animation: positionItem4 0.9s ease-in-out 1 forwards;
+.karousel.next .item:nth-child(3){
+    animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
 }
-
-@keyframes positionItem4{
+@keyframes transformFromPosition4{
     from{
         transform: var(--item4-transform);
         filter: var(--item4-filter);
-        z-index: var(--item4-z-index);
-        opacity: var(--item4-opacity);  
+        opacity: var(--item4-opacity);
     }
 }
-
-.karousel.next .list .item:nth-child(4){
-    animation: positionItem5 1.1s ease-in-out 1 forwards;
+.karousel.next .item:nth-child(4){
+    animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
 }
-
-@keyframes positionItem5{
+@keyframes transformFromPosition5{
     from{
         transform: var(--item5-transform);
         filter: var(--item5-filter);
-        z-index: var(--item5-z-index);
-        opacity: var(--item5-opacity);  
+        opacity: var(--item5-opacity);
     }
 }
+/* previous */
+.karousel.prev .list .item:nth-child(5){
+    animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+}
+.karousel.prev .list .item:nth-child(4){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+.karousel.prev .list .item:nth-child(3){
+    animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+}
+.karousel.prev .list .item:nth-child(2){
+    animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition1{
+    from{
+        transform: var(--item1-transform);
+        filter: var(--item1-filter);
+        opacity: var(--item1-opacity);        
+    }
+}
+
+
