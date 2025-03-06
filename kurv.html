@@ -16,106 +16,96 @@
                 <img src="./img/buzzy-light.png" alt="Zero Buzz Brew Logo i mørkegrå">
             </a>
         </div>
-            <nav>
-                <div class="nav-container">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="oversigt.html">OVERSIGT</a></li>
-                            <li><a href="shop.html">SHOP</a></li>
-                        </ul>
-                    </nav>
-                    <a href="kurv.html"><img src="./img/kurv-ikon.png" alt="Ikon af en dåse"></a>
-                </div>
+        <nav>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="oversigt.html">OVERSIGT</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                    </ul>
+                </nav>
+                <a href="kurv.html"><img src="./img/kurv-ikon.png" alt="Ikon af en dåse"></a>
+            </div>
+        </nav>
     </header>
-        <main class="checkout-container">
-            <section class="info-section">
-                <h2>Dine oplysninger</h2>
-                <form>
-                    <div class="form-group">
-                        <label>Navn</label>
-                        <input type="text">
-                        <label>Efternavn</label>
-                        <input type="text">
-                    </div>
-                    <label>Adresse</label>
+    <main class="checkout-container">
+        <section class="info-section">
+            <h2>Dine oplysninger</h2>
+            <form>
+                <div class="form-group">
+                    <label>Navn</label>
                     <input type="text">
-                    <div class="form-group">
-                        <label>By</label>
-                        <input type="text">
-                        <label>Postnummer</label>
-                        <input type="text">
-                    </div>
-                    <label>Land</label>
+                    <label>Efternavn</label>
                     <input type="text">
-                    <label>Telefon Nummer</label>
+                </div>
+                <label>Adresse</label>
+                <input type="text">
+                <div class="form-group">
+                    <label>By</label>
                     <input type="text">
-                    <label>E-mail</label>
-                    <input type="email">
-                    <div class="newsletter">
-                        <input type="checkbox" id="newsletter">
-                        <label for="newsletter">Vil du modtage vores nyhedsbrev?</label>
-                    </div>
-                    <div class="buttons">
-                        <button type="button" class="back">Tilbage</button>
-                        <button type="submit" class="continue">Fortsæt</button>
-                    </div>
-                </form>
-            </section>
-            <section class="cart-section">
-                <div class="cart-top">
-                    <h2>Min kurv</h2>
-                    <table>
+                    <label>Postnummer</label>
+                    <input type="text">
+                </div>
+                <label>Land</label>
+                <input type="text">
+                <label>Telefon Nummer</label>
+                <input type="text">
+                <label>E-mail</label>
+                <input type="email">
+                <div class="newsletter">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Vil du modtage vores nyhedsbrev?</label>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="back">Tilbage</button>
+                    <button type="submit" class="continue">Fortsæt</button>
+                </div>
+            </form>
+        </section>
+        <section class="cart-section">
+            <div class="cart-top">
+                <h2>Min kurv</h2>
+                <table>
+                    <thead>
                         <tr>
                             <th>Produkt</th>
                             <th>Stk</th>
                             <th>Pris</th>
+                            <th>Total</th>
                         </tr>
-                        <tr>
-                            <td><img src="/img/blueberry-w-bg.jpg" alt="Blueberry Twister"> Blueberry Twister</td>
-                            <td>2</td>
-                            <td>DKK 39,99</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/img/lemon-w-bg.jpg" alt="Lemon Burst"> Lemon Burst</td>
-                            <td>1</td>
-                            <td>DKK 19,99</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/img/strawberry-w-bg.jpg" alt="Strawberry Punch"> Strawberry Punch</td>
-                            <td>1</td>
-                            <td>DKK 19,99</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="cart-bottom">
-                    <div class="summary">
-                        <p>Subtotal: <span>DKK 59,98</span></p>
-                        <p>Shipping: <span>DKK 40</span></p>
-                        <p>Rabattkode: <span class="discount">DKK 30,95</span></p>
-                        <p class="total">TOTAL: <span>DKK 99,98</span></p>
-                    </div>
-                </div>
-            </section>
-            </main>
-            <img src="/img/buzzykurv.png" alt="Buzzy Character" class="buzzy">
-        </main>
-        
-        <footer>
-            <section>
-                <h2>Kontakt</h2>
-                <p>Zerobuzzbrew@gmail.com</p>
-                <p>+45 12 34 56 78</p>
-                <p>Skriv til os <a href="#">her</a></p>
-            </section>
-            <img src="./img/buzzy-light.png" alt="Zero Buzz Brew Logo i beige">
-            <div class="social-media">
-                <a href="#"><img src="./img/facebook.png" alt="Facebook ikon"></a>
-                <a href="#"><img src="./img/instagram.png" alt="Instagram ikon"></a>
-                <a href="#"><img src="./img/tiktok.png" alt="Twitter ikon"></a>
-                <a href="#"><img src="./img/youtube.png" alt="Twitter ikon"></a>
+                    </thead>
+                    <tbody class="cart-items">
+                        <!-- Varer vises her dynamisk -->
+                    </tbody>
+                </table>
             </div>
-        </footer>
+            <div class="cart-bottom">
+                <div class="summary">
+                    <p>Subtotal: <span class="subtotal">DKK 0,00</span></p>
+                    <p>Shipping: <span class="shipping">DKK 0,00</span></p>
+                    <p>Rabattkode: <span class="discount">DKK 0,00</span></p>
+                    <p class="total">Total: <span>DKK 0,00</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <img src="/img/buzzykurv.png" alt="Buzzy Character" class="buzzy">
+    <footer>
+        <section>
+            <h2>Kontakt</h2>
+            <p>Zerobuzzbrew@gmail.com</p>
+            <p>+45 12 34 56 78</p>
+            <p>Skriv til os <a href="#">her</a></p>
+        </section>
+        <img src="./img/buzzy-light.png" alt="Zero Buzz Brew Logo i beige">
+        <div class="social-media">
+            <a href="#"><img src="./img/facebook.png" alt="Facebook ikon"></a>
+            <a href="#"><img src="./img/instagram.png" alt="Instagram ikon"></a>
+            <a href="#"><img src="./img/tiktok.png" alt="Twitter ikon"></a>
+            <a href="#"><img src="./img/youtube.png" alt="Twitter ikon"></a>
+        </div>
+    </footer>
+    <script src="./javascript/app.js"></script>
 </body>
 </html>
-    

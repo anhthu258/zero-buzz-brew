@@ -3,7 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
+}
 
+@font-face {
+    font-family: kookyCloud-extra;
+    src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
+}
+body {
+    body {
+        font-family: 'kookyCloud', Arial, sans-serif;
+    }
+}
+h1, h2, h3 {
+    font-family: 'kookyCloud', Arial, sans-serif;
+}
+
+p {
+    font-family: 'kookyCloud-extra', Arial, sans-serif;
+}
 :root{
     --dark-grey: #222222;
     --beige: #F6EDE5;
