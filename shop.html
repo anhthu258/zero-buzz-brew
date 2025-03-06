@@ -24,7 +24,10 @@
                     <li><a href="shop.html">SHOP</a></li>
                 </ul>
             </nav>
-            <a href="kurv.html"><img src="./img/kurv-ikon.png" alt="Ikon af en dåse"></a>
+            <div class="iconKurv">
+                <img src="./img/kurv-ikon.png" alt="ikon">
+                <div class="totalQuantity">0</div>
+            </div>
         </div>
     </header>
 
@@ -46,8 +49,8 @@
                                     <p>alkoholfri øl</p>
                                 </article>
                                 <article>
-                                    <p>19,99 kr</p>
-                                    <p>24,99kr</p>
+                                    <p>DKK 19,99</p>
+                                    <p>DKK 24,99</p>
                                     <button>Tilføj til kurv</button>
                                 </article>
                             </div>
@@ -61,8 +64,8 @@
                                     <p>alkoholfri øl</p>
                                 </article>
                                 <article>
-                                    <p>19,99 kr</p>
-                                    <p>24,99kr</p>
+                                    <p>DKK 19,99</p>
+                                    <p>DKK 24,99</p>
                                     <button>Tilføj til kurv</button>
                                 </article>
                             </div>
@@ -76,8 +79,8 @@
                                     <p>alkoholfri øl</p>
                                 </article>
                                 <article>
-                                    <p>19,99 kr</p>
-                                    <p>24,99kr</p>
+                                    <p>DKK 19,99</p>
+                                    <p>DKK 24,99</p>
                                     <button>Tilføj til kurv</button>
                                 </article>
                             </div>
@@ -91,8 +94,8 @@
                                     <p>alkoholfri øl</p>
                                 </article>
                                 <article>
-                                    <p>19,99 kr</p>
-                                    <p>24,99kr</p>
+                                    <p>DKK 19,99</p>
+                                    <p>DDK 24,99</p>
                                     <button>Tilføj til kurv</button>
                                 </article>
                             </div>
@@ -100,6 +103,66 @@
                 </div>
             </main>
         </div>
+
+        <aside class="cart">
+            <h2>KURV</h2>
+            <section class="listCart">
+                <div class="item">
+                    <img src="./img/lemonburst.png" alt="Zero Buzz Brew Lemon Burst">
+                    <div class="content">
+                        <h3 class="name">LEMON BURST</h3>
+                        <p class="price">DKK19,99</p>
+                    </div>
+                    <section class="quantity">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </section>
+                </div>
+                <div class="item">
+                    <img src="./img/aboslutezero.png" alt="Zero Buzz Brew Absolut Zero">
+                    <div class="content">
+                        <h3 class="name">ABSOLUT ZERO</h3>
+                        <p class="price">DKK19,99</p>
+                    </div>
+                    <section class="quantity">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </section>
+                </div>
+                <div class="item">
+                    <img src="./img/strawberrypunch.png" alt="Zero Buzz Brew Strawberry Punch">
+                    <div class="content">
+                        <h3 class="name">STRAWBERRY PUNCH</h3>
+                        <p class="price">DKK19,99</p>
+                    </div>
+                    <section class="quantity">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </section>
+                </div>
+                <div class="item">
+                    <img src="./img/blueberrytwister.png" alt="Zero Buzz Brew Blueberry Twister">
+                    <div class="content">
+                        <h3 class="name">BLUEBERRY TWISTER</h3>
+                        <p class="price">DKK19,99</p>
+                    </div>
+                    <section class="quantity">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </section>
+                </div>
+            </section>
+            <section class="buttons">
+                <div class="close">LUKKE</div>
+                <div class="checkout">
+                    <a href="kurv.html">BETAL</a>
+                </div>
+            </section>
+        </aside>
 
         <footer>
             <section>
@@ -116,6 +179,6 @@
                 <a href="#"><img src="./img/youtube.png" alt="Twitter ikon"></a>
             </div>
         </footer>
-
+        <script src="./javascript/app.js"></script>
     </body>
 </html>
