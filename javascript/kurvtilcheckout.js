@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let newCartItem = document.createElement('tr');
                 newCartItem.innerHTML = `
-                    <td>${product.name}</td>
+                    <td>
+                        <img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px;">
+                        ${product.name}
+                    </td>
                     <td>${product.quantity}</td>
                     <td>DKK ${product.price.toFixed(2)}</td>
                     <td>DKK ${total.toFixed(2)}</td>
@@ -47,4 +50,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Kald updateCartItems når siden indlæses
     updateCartItems();
 });
-
