@@ -150,7 +150,8 @@ header{
     flex-wrap: wrap;
     align-content: space-between;
 }
-.find-buzzy span{
+
+span{
     display: block;
 }
 
