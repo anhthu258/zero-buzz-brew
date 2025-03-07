@@ -12,17 +12,22 @@
     font-family: kookyCloud-extra;
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
+
+@font-face {
+    font-family: bahnschrift;
+    src: url(/fonts/BAHNSCHRIFT.TTF);
+}
 body {
     body {
-        font-family: 'kookyCloud', Arial, sans-serif;
+        font-family: 'bahnscrift, Arial, sans-serif';
     }
 }
 h1, h2, h3 {
-    font-family: 'kookyCloud', Arial, sans-serif;
+    font-family: 'bahnscrift', Arial, sans-serif;
 }
 
 p {
-    font-family: 'kookyCloud-extra', Arial, sans-serif;
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 :root{
     --dark-grey: #222222;
@@ -122,7 +127,9 @@ body::before {
     background-color: transparent; 
     box-shadow: none; 
     margin-top: 20px; 
+    font-family: bahnschrift;
 }
+
 
 .info-section, .cart-section {
     padding: 0; 
@@ -140,6 +147,7 @@ body::before {
 .info-section h2 {
     margin-bottom: 20px; 
     font-size: 1.5em; 
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .info-section label {
@@ -199,6 +207,7 @@ body::before {
 
 .info-section .continue {
     background-color: #d4edda; 
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .cart-section {
@@ -341,6 +350,7 @@ img {
 
 
 footer {
+    
     background-color: var(--dark-grey);
     position: absolute;
     bottom: -24%;
