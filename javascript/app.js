@@ -1,4 +1,4 @@
-let iconKurv = document.querySelector('.iconKurv');
+let iconCart = document.querySelector('.iconCart');
 let cart = document.querySelector('.cart');
 let container = document.querySelector('.container');
 let close = document.querySelector('.close');
@@ -10,7 +10,7 @@ document.querySelector('.checkout a').addEventListener('click', function(event) 
 });
 
 
-iconKurv.addEventListener('click', function() {
+iconCart.addEventListener('click', function() {
     if (cart.style.right === '-400px' || cart.style.right === '') {
         cart.style.right = '0';
         container.style.transform = 'translateX(-400px)';
