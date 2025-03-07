@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000);
         } else {
             console.log('Some fields are missing!'); // Bekræft, at felter mangler
-            alert('Venligst udfyld alle felter.'); // Vis en alert, hvis felter mangler
         }
     });
 });
