@@ -1,91 +1,50 @@
-let listCart = [];
+document.addEventListener('DOMContentLoaded', function() {
+    // Hent listCart fra localStorage
+    let listCart = JSON.parse(localStorage.getItem('listCart')) || {};
 
+    // Hent cart-items elementet
+    let cartItems = document.querySelector('.cart-items');
 
-function checkCart() {
-    const savedCart = localStorage.getItem('listCart');
-    if (savedCart) {
-        listCart = JSON.parse(savedCart);
-    }
-}
+    // Hent subtotal, shipping, discount og total elementerne
+    let subtotalElement = document.querySelector('.subtotal');
+    let shippingElement = document.querySelector('.shipping');
+    let discountElement = document.querySelector('.discount');
+    let totalElement = document.querySelector('.total span');
 
-
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId); 
-    if (product) {
-        const existingProduct = listCart.find(p => p.id === productId);
-        if (existingProduct) {
-            existingProduct.quantity += 1; 
-        } else {
-            product.quantity = 1; 
-            listCart.push(product);
-        }
-        updateCart();
-    }
-}
-
-
-function updateCart() {
-    
-    localStorage.setItem('listCart', JSON.stringify(listCart));
-
-     
-     if (listCart.length === 0) {
-        document.querySelector('.subtotal').innerText = 'DKK 0,00';
-        document.querySelector('.shipping').innerText = 'DKK 0,00';
-        document.querySelector('.discount').innerText = 'DKK 0,00';
-        document.querySelector('.total span').innerText = 'DKK 0,00';
-        return; 
-    }
-
-    
-    const totalQuantity = listCart.reduce((total, product) => total + product.quantity, 0);
-    document.querySelector('.totalQuantity').innerText = totalQuantity;
-
-   
-    if (document.querySelector('.cart-items')) {
-        const cartItems = document.querySelector('.cart-items');
+    // Funktion til at opdatere cart items
+    function updateCartItems() {
         cartItems.innerHTML = '';
+        let subtotal = 0;
 
-        let totalPrice = 0;
-        listCart.forEach(product => {
-            const cartItem = document.createElement('tr');
-            cartItem.innerHTML = `
-                <td><img src="${product.image}" alt="${product.name}" width="50"></td>
-                <td>${product.name}</td>
-                <td>${product.quantity}</td>
-                <td>DKK ${product.price}</td>
-                <td>DKK ${(product.price * product.quantity).toFixed(2)}</td>
-            `;
-            cartItems.appendChild(cartItem);
+        Object.values(listCart).forEach(product => {
+            if (product) {
+                let total = product.price * product.quantity;
+                subtotal += total;
 
-            totalPrice += product.price * product.quantity;
+                let newCartItem = document.createElement('tr');
+                newCartItem.innerHTML = `
+                    <td>${product.name}</td>
+                    <td>${product.quantity}</td>
+                    <td>DKK ${product.price.toFixed(2)}</td>
+                    <td>DKK ${total.toFixed(2)}</td>
+                `;
+                cartItems.appendChild(newCartItem);
+            }
         });
 
-       
-        document.querySelector('.total').innerText = `DKK ${totalPrice.toFixed(2)}`;
+        // Beregn og vis totals
+        let shipping = 50; // Fast shipping pris
+        let discount = 0; // Ingen rabatkode implementeret
+
+        let total = subtotal + shipping - discount;
+
+        subtotalElement.innerText = `DKK ${subtotal.toFixed(2)}`;
+        shippingElement.innerText = `DKK ${shipping.toFixed(2)}`;
+        discountElement.innerText = `DKK ${discount.toFixed(2)}`;
+        totalElement.innerText = `DKK ${total.toFixed(2)}`;
     }
-}
 
-
-let products = [];
-fetch('./javascript/product.json')
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-    })
-    .catch(error => console.error('Fejl ved indlæsning af produkter:', error));
-
-
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-        const productId = parseInt(button.getAttribute('data-id')); // Hent produktets ID
-        addToCart(productId);
-    });
-});
-
-
-window.addEventListener('load', () => {
-    checkCart();
-    updateCart();
+    // Kald updateCartItems når siden indlæses
+    updateCartItems();
 });
 
