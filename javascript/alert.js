@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                
                 const toast = document.getElementById('toast-notification');
                 if (toast) {
-                    toast.textContent = "TAK FOR DIT KØB - SAMMENHOLD ER VIGTIGERE END ALKOHOL"; // Opdater beskeden
+                    toast.textContent = "TAK FOR DIT KØB - SAMMENHOLD ER VIGTIGERE END ALKOHOL"; 
                     toast.classList.add('toast-visible');
                     console.log('Toast-notifikation blev vist.');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     setTimeout(function () {
                         toast.classList.remove('toast-visible');
                         console.log('Toast-notifikation blev fjernet.');
-                    }, 3000);
+                    }, 4000);
                 } else {
                     console.error('Toast-notifikationen blev ikke fundet i DOM\'en.');
                 }
