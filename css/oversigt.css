@@ -108,7 +108,24 @@ main {
     padding: 20px 20px;
     min-height: 300px;
 }
-
+.iconCart {
+    position: relative;
+    z-index: 1;
+}
+.totalQuantity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: x-large;
+    width: 35px;
+    height: 40px;
+    color: var(--dark-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10px) translateY(12px);
+    cursor: pointer;
+}
 .produkt img {
     width: 300px;
     height: auto;
