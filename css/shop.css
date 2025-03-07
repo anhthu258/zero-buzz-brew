@@ -362,12 +362,29 @@ button {
     font-weight: bold;
 }
 
-.cart .buttons .checkout {
-    background-color: var(--light-green);
-}
-
 .cart .buttons .checkout:hover {
     background-color: var(--neon-green);
+}
+
+.cart .buttons .checkout {
+    background-color: var(--neon-green);
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center; 
+    text-decoration: none; 
+    padding: 0; 
+    width: 100%; 
+    font-size: 2rem; 
+    border: none;
+}
+
+
+
+.checkout:hover {
+    background-color: #e2b33b; 
 }
 
 footer {
