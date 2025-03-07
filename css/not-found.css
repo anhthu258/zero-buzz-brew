@@ -108,7 +108,7 @@ nav li a:hover {
 }
 
 main {
-    background-image: url('../img/doodle-cut.png');
+    background-image: url('../img/doodle-cut.webp');
     background-size: cover;
     background-repeat: no-repeat;
     flex: 1;

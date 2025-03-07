@@ -12,17 +12,22 @@
     font-family: kookyCloud-extra;
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
+
+@font-face {
+    font-family: bahnschrift;
+    src: url(/fonts/BAHNSCHRIFT.TTF);
+}
 body {
     body {
-        font-family: 'kookyCloud', Arial, sans-serif;
+        font-family: 'bahnscrift, Arial, sans-serif';
     }
 }
 h1, h2, h3 {
-    font-family: 'kookyCloud', Arial, sans-serif;
+    font-family: 'bahnscrift', Arial, sans-serif;
 }
 
 p {
-    font-family: 'kookyCloud-extra', Arial, sans-serif;
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 :root{
     --dark-grey: #222222;
@@ -70,6 +75,7 @@ nav a{
     text-decoration: none;
     color: var(--dark-grey);
     font-size: 1.5rem;
+    font-family: bahnschrift;
 }
 
 nav li a:hover{
@@ -99,7 +105,7 @@ header{
 
 body::before {
     content: "";
-    background-image: url('../img/kurvbaggrund.jpg');
+    background-image: url('../img/kurvbaggrund.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,7 +128,9 @@ body::before {
     background-color: transparent; 
     box-shadow: none; 
     margin-top: 20px; 
+    font-family: bahnschrift;
 }
+
 
 .info-section, .cart-section {
     padding: 0; 
@@ -140,6 +148,7 @@ body::before {
 .info-section h2 {
     margin-bottom: 20px; 
     font-size: 1.5em; 
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .info-section label {
@@ -199,6 +208,7 @@ body::before {
 
 .info-section .continue {
     background-color: #d4edda; 
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .cart-section {
@@ -341,14 +351,17 @@ img {
 
 
 footer {
+    
     background-color: var(--dark-grey);
+    position: absolute;
+    bottom: -24%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     color: var(--beige);
+    width: 100%;
     padding: 1rem;
-    height: 20vh;
 }
 
 footer a {
@@ -377,6 +390,7 @@ footer img {
 
 
 #toast-notification {
+    font-family: bahnschrift;
     visibility: hidden; 
     opacity: 0; 
     position: fixed;
@@ -389,9 +403,47 @@ footer img {
     transition: opacity 0.5s, visibility 0.5s; 
 }
 
+
 #toast-notification.toast-visible {
     visibility: visible; 
     opacity: 1; 
 }
 
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
 
+.toast-visible {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.toast-error {
+    font-family: bahnschrift;
+    background-color: red;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
