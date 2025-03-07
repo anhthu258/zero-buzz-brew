@@ -13,6 +13,10 @@
     font-family: kookyCloud-extra;
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
+@font-face {
+    font-family: 'bahnschrift';
+    src: url(/fonts/BAHNSCHRIFT.TTF);
+}
 
 body {
     font-family: bahnscript, sans-serif;
@@ -131,7 +135,7 @@ section {
 }
 
 section h1 {
-    font-family: kookyCloud;
+    font-family: bahnschrift, sans-serif;
     font-size: 100px;
     font-weight: 10;
     color: var(--dark-grey);
