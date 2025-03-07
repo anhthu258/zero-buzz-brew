@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "name": "Lemon Burst",
-        "price": 19.99,
-        "image": "./img/lemonburst.png"
-    },
-    
-    {
-        "id": 2,
         "name": "Absolut Zero",
         "price": 19.99,
         "image": "./img/aboslutezero.png"
     },
     
+    {
+        "id": 2,
+        "name": "Lemon Burst",
+        "price": 19.99,
+        "image": "./img/lemonburst.png"
+    },
+
     {
         "id": 3,
         "name": "Bluebery Twister",
