@@ -383,5 +383,5 @@ footer img {
 
 @keyframes fadeout {
     from {bottom: 20px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    to {bottom: -50px; opacity: 0;} /* Ændret fra bottom: 0 til bottom: -50px */
 }

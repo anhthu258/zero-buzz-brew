@@ -106,32 +106,4 @@ window.addEventListener('load', () => {
     checkCart();
     updateCart();
 });
-document.querySelector('.continue').addEventListener('click', function(event) {
-    
-
-    // Hent værdierne fra inputfelterne
-    const navn = document.querySelector('input[type="text"]').value;
-    const efternavn = document.querySelectorAll('input[type="text"]')[1].value;
-    const adresse = document.querySelectorAll('input[type="text"]')[2].value;
-    const by = document.querySelectorAll('input[type="text"]')[3].value;
-    const postnummer = document.querySelectorAll('input[type="text"]')[4].value;
-    const land = document.querySelectorAll('input[type="text"]')[5].value;
-    const telefon = document.querySelectorAll('input[type="text"]')[6].value;
-    const email = document.querySelector('input[type="email"]').value;
-
-    // Tjek om alle felter er udfyldt
-    if (navn && efternavn && adresse && by && postnummer && land && telefon && email) {
-        // Vis toast-notifikation
-        const toast = document.getElementById('toast-notification');
-        toast.classList.add('toast-visible');
-
-        // Fjern notifikationen efter 3 sekunder
-        setTimeout(function() {
-            toast.classList.remove('toast-visible');
-        }, 3000);
-    } else {
-        // Vis alert-boks, hvis ikke alle felter er udfyldt
-        alert('Udfyld venligst alle felter.');
-    }
-});
 
