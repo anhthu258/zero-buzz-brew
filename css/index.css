@@ -25,20 +25,20 @@
     --item1-z-index: 11;
     --item1-opacity: 0;
     /*Dåse position 2*/
-    --item2-transform: translate(-40%,10%) scale(1.3) rotate(-20deg);
+    --item2-transform: translate(-55%,10%) scale(1.3) rotate(-20deg);
     --item2-filter: blur(0);
     --item2-z-index: 10;
     --item2-opacity: 1;
     /*Dåse position 3*/
-    --item3-transform: translate(25% , -10%) scale(0.75);
-    --item3-filter: blur(5px);
+    --item3-transform: translate(-7% , -5%) scale(0.75);
+    --item3-filter: blur(0px);
     --item3-z-index: 9;
-    --item3-opacity: 0.8;
+    --item3-opacity: 0.6;
     /*Dåse position 4*/
-    --item4-transform: translate(50% , -20%) scale(0.35);
-    --item4-filter: blur(10px);
+    --item4-transform: translate(30% , -10%) scale(0.45) rotate(-20deg);
+    --item4-filter: blur(0px);
     --item4-z-index: 8;
-    --item4-opacity: 0.8;
+    --item4-opacity: 0.3;
     /*Dåse position 5*/
     --item5-transform: translate(70% , -25%) scale(0.15);
     --item5-filter: blur(10px);
@@ -270,11 +270,10 @@ footer img {
 
 .karousel .list .item .intro{
     position: absolute;
-    top: 100%;
-    transform: translateY(50%) rotate(20deg);
+    top: 105%;
+    transform: translateY(35%) rotate(20deg);
     width: 400px;
-    text-align: right;
-    right: 10%;
+    right: -15%;
     opacity: 0;
     pointer-events: none;
 }
@@ -334,23 +333,21 @@ footer img {
     /*Navigation til karousel*/
 .arrows{
     position: absolute;
-    bottom: -8rem;
-    width: 20rem;
+    bottom: -6rem;
+    width: 45rem;
     transform: translatex(0%);
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    right: 50%;
+    right: 28%;
 }
 
 .arrows #prev, .arrows #next{
-width: 40px;
-height: 40px;
-border-radius: 50%;
-font-family: monospace;
-font-size: large;
-font-weight: bold;
-border: 1px solid var(--dark-grey);
+background-color: transparent;
+color: var(--pink);
+font-size: 5rem;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border: none;
 z-index: 101;
 cursor: pointer;
 }
@@ -364,6 +361,7 @@ cursor: pointer;
     background-color: transparent;
     opacity: 0;
     pointer-events: none;
+
 }
 
 .karousel .list .item .intro .title{
@@ -373,7 +371,7 @@ cursor: pointer;
 }
 
 .karousel .list .item .intro .topic{
-    font-size: 4rem;
+    font-size: 3.4rem;
     font-weight: 500;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -392,6 +390,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-weight: bold;
 margin-top: 1rem;
 padding: 5px 0 ;
+cursor: pointer;
 }
 
 .karousel .list .item:nth-child(2) .intro .title,
@@ -399,7 +398,7 @@ padding: 5px 0 ;
 .karousel .list .item:nth-child(2) .intro .des,
 .karousel .list .item:nth-child(2) .intro .seeMore{
     opacity: 0;
-    animation: showcontent 1s 1s forwards;
+    animation: showcontent 0.5s 0.1s forwards;
 
 }
 
