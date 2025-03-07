@@ -18,15 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const telefon = document.querySelectorAll('input[type="text"]')[6].value;
             const email = document.querySelector('input[type="email"]').value;
 
-            console.log('Navn:', navn);
-            console.log('Efternavn:', efternavn);
-            console.log('Adresse:', adresse);
-            console.log('By:', by);
-            console.log('Postnummer:', postnummer);
-            console.log('Land:', land);
-            console.log('Telefon:', telefon);
-            console.log('Email:', email);
-
             // Tjek om alle felter er udfyldt
             if (navn && efternavn && adresse && by && postnummer && land && telefon && email) {
                 console.log('Alle felter er udfyldt. Viser toast-notifikation.');
@@ -34,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Vis toast-notifikation
                 const toast = document.getElementById('toast-notification');
                 if (toast) {
+                    toast.textContent = "TAK FOR DIT KØB - SAMMENHOLD ER VIGTIGERE END ALKOHOL"; // Opdater beskeden
                     toast.classList.add('toast-visible');
                     console.log('Toast-notifikation blev vist.');
 
