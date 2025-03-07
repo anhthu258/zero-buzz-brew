@@ -3,26 +3,26 @@
         "id": 1,
         "name": "Absolut Zero",
         "price": 19.99,
-        "image": "./img/aboslutezero.png"
+        "image": "./img/aboslutezero.webp"
     },
     
     {
         "id": 2,
         "name": "Lemon Burst",
         "price": 19.99,
-        "image": "./img/lemonburst.png"
+        "image": "./img/lemonburst.webp"
     },
 
     {
         "id": 3,
         "name": "Bluebery Twister",
         "price": 19.99,
-        "image": "./img/blueberrytwister.png"
+        "image": "./img/blueberrytwister.webp"
     },
     
     {
         "id": 4,
         "name": "Strawberry Punch",
         "price": 19.99,
-        "image": "./img/strawberrypunch.png"}
+        "image": "./img/strawberrypunch.webp"}
 ]
