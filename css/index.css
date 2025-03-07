@@ -50,6 +50,10 @@
     --item5-opacity: 0;
 }
 
+html{
+    width: 102vw;
+}
+
 #logo img{
     width: 15rem;
 }
@@ -59,7 +63,7 @@
 
 body{
     background-image: url(../img/gradient3.png);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 nav{
@@ -117,6 +121,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 102vw;
 }
 
 #header-sky{
@@ -125,7 +130,7 @@ header{
 
 #header-sky img{
     position: absolute;
-    top: 17.8%;
+    top: 14.8%;
     left: -10%;
     width: 100%;
     transform: scale(0.8);
@@ -297,10 +302,10 @@ footer img {
 
 .karousel .list .item .intro{
     position: absolute;
-    top: 105%;
+    top: 120%;
     transform: translateY(35%) rotate(20deg);
     width: 400px;
-    right: -5%;
+    right: -15%;
     opacity: 0;
     pointer-events: none;
 }
@@ -360,13 +365,13 @@ footer img {
     /*Navigation til karousel*/
 .arrows{
     position: absolute;
-    bottom: -10rem;
+    bottom: -14rem;
     width: 45rem;
     transform: translatex(0%);
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    right: 38%;
+    right: 27%;
 }
 
 .arrows #prev, .arrows #next{
