@@ -6,9 +6,10 @@
 
 h1, h2, h3 {
     font-family: kookyCloud;
-    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf)
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
-p{
+
+p {
     font-family: kookycloud;
     src: url(../fonts/kookyCloud/Hello-KookyCloud.otf);
 }
@@ -155,28 +156,28 @@ main {
 #lemon-burst:hover h2,
 #lemon-burst:hover p {
     color: #000000;
-    text-shadow: 2px 2px 8px #CEFF00;
+    text-shadow: 4px 4px 12px #ccff00; /* Kraftigere skygge */
     transform: scale(1.1);
 }
 
 #blueberry-twister:hover h2,
 #blueberry-twister:hover p {
-    color: #000000;
-    text-shadow: 2px 2px 8px #5642BA;
+    color: #ffffff;
+    text-shadow: 4px 4px 12px #5642BA; /* Kraftigere skygge */
     transform: scale(1.1);
 }
 
 #strawberry-punch:hover h2,
 #strawberry-punch:hover p {
-    color: #000000;
-    text-shadow: 2px 2px 8px #FD0062;
+    color: #ffffff;
+    text-shadow: 6px 6px 12px #010101; /* Kraftigere skygge */
     transform: scale(1.1);
 }
 
 #absolut-zero:hover h2,
 #absolut-zero:hover p {
     color: #000000;
-    text-shadow: 2px 2px 8px #DDD4D1;
+    text-shadow: 4px 4px 12px #DDD4D1; /* Kraftigere skygge */
     transform: scale(1.7);
 }
 
