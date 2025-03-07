@@ -6,12 +6,11 @@
 
 h1, h2, h3 {
     font-family: kookyCloud;
-    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
+    font-weight: 100;
 }
 
 p {
-    font-family: kookyCloud; /* Rettet fra 'kookycloud' til 'kookyCloud' for konsistens */
-    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
+    font-family: bahnscript, sans-serif;
 }
 
 @font-face {
@@ -35,8 +34,30 @@ p {
     --light-green: #f1ffb1;
 }
 
+body {
+    font-family: bahnscript, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 #logo img {
     width: 15rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav {
@@ -88,25 +109,18 @@ nav li a:hover {
     height: 3.5rem;
 }
 
-header {
-    background-color: var(--dark-grey);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
 main {
     text-align: center;
     padding: 0;
+    z-index: 1;
 }
 
-.produkt {
+.produkt-1, .produkt-2 {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 20px 20px;
-    min-height: 300px;
+    height: 300px;
 }
 .iconCart {
     position: relative;
@@ -160,66 +174,57 @@ main {
     flex-direction: row;
 }
 
-.produkt.image-left {
+.produkt-2 {
+    justify-content: space-evenly;
     flex-direction: row-reverse;
+}
+
+.produkt-1 img, .produkt-2 img {
+    width: 200px;
+    height: auto;
 }
 
 .produkt h2 {
     font-size: 2.5rem;
     line-height: 1.2;
-    margin-bottom: 30px; 
-    margin-right: 100px;
-}
-
-.produkt h3 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 30px; 
-    margin-left: 150px;
-}
-
-.produkt h3,
-.produkt p {
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .produkt p {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin-top: 0; 
+    margin-top: 0;
 }
 
-.produkt h2,
-.produkt p {
+.produkt h2, .produkt p {
     transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#lemon-burst:hover h2,
-#lemon-burst:hover p {
+#lemon-burst:hover h2, #lemon-burst:hover p,
+#blueberry-twister:hover h2, #blueberry-twister:hover p,
+#strawberry-punch:hover h2, #strawberry-punch:hover p,
+#absolut-zero:hover h2, #absolut-zero:hover p {
+    transform: scale(1.1);
+}
+
+#lemon-burst:hover h2, #lemon-burst:hover p {
     color: #000000;
     text-shadow: 4px 4px 12px #ccff00;
-    transform: scale(1.1);
 }
 
-#blueberry-twister:hover h3,
-#blueberry-twister:hover p {
+#blueberry-twister:hover h2, #blueberry-twister:hover p {
     color: #ffffff;
     text-shadow: 4px 4px 12px #5642BA;
-    transform: scale(1.1);
 }
 
-#strawberry-punch:hover h2,
-#strawberry-punch:hover p {
+#strawberry-punch:hover h2, #strawberry-punch:hover p {
     color: #ffffff;
     text-shadow: 6px 6px 12px #010101;
-    transform: scale(1.1);
 }
 
-#absolut-zero:hover h3,
-#absolut-zero:hover p {
+#absolut-zero:hover h2, #absolut-zero:hover p {
     color: #000000;
     text-shadow: 4px 4px 12px #DDD4D1;
-    transform: scale(1.7);
 }
 
 #lemon-burst {
@@ -242,29 +247,22 @@ main {
     color: var(--dark-grey);
 }
 
-#lemon-burst:hover {
-    background-image: url('/img/doodle_exspanded.webp');
-    background-size: cover;
-    background-position: center;
-}
-
-#blueberry-twister:hover {
+.produkt-1:hover, .produkt-2:hover {
     background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/doodle_exspanded.webp');
-    background-size: cover;
-    background-position: center;
     opacity: 90%;
 }
 
-#absolut-zero:hover {
-    background-image: url('/img/doodle_exspanded.webp');
-    background-size: cover;
-    background-position: center;
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start; 
+    width: 80vh;
 }
 
 footer {
