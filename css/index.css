@@ -49,6 +49,9 @@
     --item5-z-index: 7;
     --item5-opacity: 0;
 }
+html {
+    overflow-x: hidden;
+}
 
 #logo img{
     width: 15rem;
@@ -122,15 +125,12 @@ header{
 
 #header-sky{
     height: 1.5rem;  
+    
 }
 
 #header-sky img{
     position: absolute;
-<<<<<<< HEAD
     top: 15%;
-=======
-    top: 17.8%;
->>>>>>> parent of 223342f (Update index.css)
     left: -10%;
     width: 100%;
     transform: scale(0.8);
@@ -176,12 +176,12 @@ aside{
     font-family: 'bahnschrift';
     color: var(--light-pink);
     position: absolute;
-    top: 194%;
-    left: 15%;
+    top: 190%;
+    left: 10%;
 }
 
 aside h3{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 aside p{
@@ -201,7 +201,7 @@ aside button{
 .footercloud{
     width: 100%;
     position:absolute;
-    bottom: -161%;
+    bottom: -151%;
 }
 
 footer {
@@ -214,8 +214,8 @@ footer {
     color: var(--beige);
     padding: 1rem;
     height: 20vh;
-    width: 101%;
-    bottom: -180%;
+    width: 100%;
+    bottom: -170%;
 }
 
 footer section {
@@ -302,10 +302,10 @@ footer img {
 
 .karousel .list .item .intro{
     position: absolute;
-    top: 105%;
+    top: 115%;
     transform: translateY(35%) rotate(20deg);
     width: 400px;
-    right: -5%;
+    right: -17%;
     opacity: 0;
     pointer-events: none;
 }
@@ -365,13 +365,13 @@ footer img {
     /*Navigation til karousel*/
 .arrows{
     position: absolute;
-    bottom: -10rem;
+    bottom: -11rem;
     width: 45rem;
     transform: translatex(0%);
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    right: 38%;
+    right: 25%;
 }
 
 .arrows #prev, .arrows #next{
@@ -416,9 +416,9 @@ cursor: pointer;
 
 .karousel .list .item .image{
     position: relative;
-    top: 30%;
-    right: -55%;
-    transform: rotate(20deg) scale(2);
+    top: 40%;
+    right: -60%;
+    transform: rotate(20deg) scale(1.8);
     z-index: 1;
     opacity: 0;
 }
