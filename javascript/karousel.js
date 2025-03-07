@@ -32,12 +32,3 @@ const showSlider = (type) => {
         prevButton.style.pointerEvents = 'auto';
     }, 700)
 }
-seeMoreButtons.forEach((button) => {
-    button.onclick = function(){
-        karousel.classList.remove('next', 'prev');
-        karousel.classList.add('showDetail');
-    }
-});
-backButton.onclick = function(){
-    karousel.classList.remove('showDetail');
-}
