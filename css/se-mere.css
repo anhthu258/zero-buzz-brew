@@ -36,7 +36,7 @@ html {
 }
 
 body {
-    font-family: bahnscript, sans-serif;
+    font-family: 'bahnschrift';
 }
 
 nav{
@@ -97,99 +97,65 @@ header{
     justify-content: space-between;
 }
 
-#header-sky{
-    height: 1.5rem;  
-    
-}
-
-#header-sky img{
-    position: absolute;
-    top: 15%;
-    left: -10%;
-    width: 100%;
-    transform: scale(0.8);
-}
-
-.find-buzzy{
-    width: 100%;
-    height: 36rem;
-    color: var(--beige);
-    font-family: 'kooky-cloud';
-    text-align: right;
-    padding-right: 15rem;
+.infosection {
+    max-width: 1920px;
+    overflow: hi;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-.find-buzzy p{
-    font-family: 'bahnschrift';
-    font-weight: 100;
-    font-size: 3.7rem;
-    color: var(--light-pink);
-    letter-spacing: -0.2rem;
-    word-spacing: 0.5rem;
+    background-color: var(--beige);
+    padding: 0 10rem;
 }
 
-.find-buzzy h1{
-    line-height: 1.3;
+.infosection h1{
+    font-family: 'kooky-cloud';
+    font-weight: 100;
     font-size: 8rem;
+    color: var(--pink);
+    padding: 2rem;
+    text-align: center;
+}
+.infosection h3{
+    font-size: 2rem;
+    color: var(--dark-grey);
+    padding: 2rem;
+    color: var(--pink);
+    text-align: center;
+    font-style: italic;
+
+}
+
+.infosection h4, h2{
+    font-family: 'kooky-cloud';
     font-weight: 100;
-    margin-top: 4rem;
-    color: var(--light-pink);
-}
-
-.find-buzzy img{
-padding: 10rem 1rem;
-margin-left: 25rem;
-transform: scale(1.1);
-}
-
-aside{
-    transform: scale(1.5);
-    font-family: 'bahnschrift';
-    color: var(--light-pink);
-    position: absolute;
-    top: 190%;
-    left: 10%;
-}
-
-aside h3{
     font-size: 4rem;
-}
+    padding: 2rem 0 ;
+    color: var(--pink);
+    text-align: left;
 
-aside p{
-    padding-bottom: 1rem;
 }
-
-aside button{
-    border: none;
-    border-radius: 25px;
-    width: 400px;
-    height: 70px;
-    background-color: var(--light-pink);
-    color: var(--purple);
-    font-family: 'bahnschrift';
-    font-size: 1.5rem;
+.infosection p{
+    font-size: 1.8rem;
+    padding-right: 20rem;
+    text-align: left;
+    padding: 2rem 0;
+    line-height: 1.4;
+    
 }
-.footercloud{
-    width: 100%;
-    position:absolute;
-    bottom: -151%;
+.infosection img{
+    transform: scale(1);
+    margin: 0;
+    border: #222222 solid 0.5rem;
 }
 
 footer {
-    position: absolute;
+   position: absolute;
     background-color: var(--dark-grey);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     color: var(--beige);
-    padding: 1rem;
-    height: 20vh;
     width: 100%;
-    bottom: -170%;
 }
 
 footer section {
@@ -208,7 +174,8 @@ footer a {
     color: var(--beige);
 }
 
-footer h2 {
+footer h5 {
+    color: var(--beige);
     font-size: 1.5rem;
     padding-bottom: 1rem;
 }
