@@ -1,4 +1,4 @@
-// form.js
+// alert.js
 
 // Vent på, at DOM'en er indlæst
 document.addEventListener('DOMContentLoaded', function () {

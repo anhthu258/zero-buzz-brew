@@ -32,7 +32,7 @@
     <main class="checkout-container">
         <section class="info-section">
             <h2>Dine oplysninger</h2>
-            <form>
+            <form id="myForm">
                 <div class="form-group">
                     <label>Navn</label>
                     <input type="text">
@@ -93,8 +93,8 @@
         </section>
     </main>
     <img src="/img/buzzykurv.png" alt="Buzzy Character" class="buzzy">
-    <div id="toast-notification" class="toast-hidden">
-        <p>Tak for at udfylde formularen!</p>
+    <div id="inline-message" style="display: none; margin-top: 20px; padding: 10px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px;">
+        Tak fordi du udfyldte formularen!
     </div>
     <footer>
         <section>
@@ -113,5 +113,6 @@
     </footer>
     <script src="/javascript/app.js"></script>
     <script src="/javascript/alert.js"></script>
+    <script src="/javascript/alert2.js"></script>
 </body>
 </html>
