@@ -10,8 +10,8 @@ h1, h2, h3 {
 }
 
 p {
-    font-family: kookycloud;
-    src: url(../fonts/kookyCloud/Hello-KookyCloud.otf);
+    font-family: kookyCloud; /* Rettet fra 'kookycloud' til 'kookyCloud' for konsistens */
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
 
 @font-face {
@@ -102,14 +102,31 @@ main {
 }
 
 .produkt {
-    padding: 40px 20px;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    transition: background 0.3s ease;
+    justify-content: flex-end;
+    padding: 20px 20px;
+    min-height: 300px;
+}
+
+.produkt img {
+    width: 300px;
+    height: auto;
+}
+
+.produkt h2,
+.produkt p {
+    max-width: 40%;
+}
+
+.produkt h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.produkt p {
+    font-size: 1rem;
+    line-height: 1.3;
 }
 
 .produkt:first-child {
@@ -130,22 +147,29 @@ main {
     flex-direction: row-reverse;
 }
 
-.produkt img {
-    width: 400px;
-    height: auto;
-    margin: 0 20px;
-}
-
 .produkt h2 {
     font-size: 2.5rem;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 30px; 
+    margin-right: 100px;
+}
+
+.produkt h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 30px; 
+    margin-left: 150px;
+}
+
+.produkt h3,
+.produkt p {
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .produkt p {
     font-size: 1.2rem;
     line-height: 1.5;
-    text-align: left;
+    margin-top: 0; 
 }
 
 .produkt h2,
@@ -156,28 +180,28 @@ main {
 #lemon-burst:hover h2,
 #lemon-burst:hover p {
     color: #000000;
-    text-shadow: 4px 4px 12px #ccff00; /* Kraftigere skygge */
+    text-shadow: 4px 4px 12px #ccff00;
     transform: scale(1.1);
 }
 
-#blueberry-twister:hover h2,
+#blueberry-twister:hover h3,
 #blueberry-twister:hover p {
     color: #ffffff;
-    text-shadow: 4px 4px 12px #5642BA; /* Kraftigere skygge */
+    text-shadow: 4px 4px 12px #5642BA;
     transform: scale(1.1);
 }
 
 #strawberry-punch:hover h2,
 #strawberry-punch:hover p {
     color: #ffffff;
-    text-shadow: 6px 6px 12px #010101; /* Kraftigere skygge */
+    text-shadow: 6px 6px 12px #010101;
     transform: scale(1.1);
 }
 
-#absolut-zero:hover h2,
+#absolut-zero:hover h3,
 #absolut-zero:hover p {
     color: #000000;
-    text-shadow: 4px 4px 12px #DDD4D1; /* Kraftigere skygge */
+    text-shadow: 4px 4px 12px #DDD4D1;
     transform: scale(1.7);
 }
 
