@@ -110,6 +110,14 @@ nav li a:hover {
     cursor: pointer;
 }
 
+.quantity button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: var(--beige);
+}
+
 #rabat {
     background-image: url(../img/rabat-banner.png);
     background-size: cover;
@@ -294,6 +302,7 @@ h2 {
     justify-content: end;
     align-items: center;
     background-color: white;
+    width: 65px;
 }
 
 .cart .listCart .item p{
