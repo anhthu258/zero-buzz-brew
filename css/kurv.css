@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: kookyCloud;
     src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
@@ -17,19 +18,22 @@
     font-family: bahnschrift;
     src: url(/fonts/BAHNSCHRIFT.TTF);
 }
+
 body {
-    body {
-        font-family: 'bahnscrift, Arial, sans-serif';
-    }
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
-h1, h2, h3 {
-    font-family: 'bahnscrift', Arial, sans-serif;
+
+h1,
+h2,
+h3 {
+    font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 p {
     font-family: 'bahnschrift', Arial, sans-serif;
 }
-:root{
+
+:root {
     --dark-grey: #222222;
     --beige: #F6EDE5;
     --darker-beige: #DDD4D1;
@@ -37,29 +41,30 @@ p {
     --light-pink: #FECBEF;
     --purple: #5642BA;
     --neon-green: #CEFF00;
-    --light-green: ##f1ffb1;
+    --light-green: #f1ffb1;
 }
 
-#logo img{
+#logo img {
     width: 15rem;
 }
 
-nav{
+nav {
     background-color: var(--dark-grey);
     height: 2.8rem;
     padding-right: 1.1rem;
 }
 
-nav ul, li{
+nav ul,
+li {
     list-style: none;
 }
 
-nav ul{
+nav ul {
     width: 100%;
     text-align: right;
 }
 
-nav li{
+nav li {
     display: inline-block;
     position: relative;
     background-color: var(--beige);
@@ -68,7 +73,7 @@ nav li{
     border-radius: 0.5rem;
 }
 
-nav a{
+nav a {
     display: block;
     line-height: 2.8rem;
     padding: 0 0.8rem;
@@ -78,7 +83,7 @@ nav a{
     font-family: bahnschrift;
 }
 
-nav li a:hover{
+nav li a:hover {
     color: var(--dark-grey);
     background-color: var(--darker-beige);
     border-radius: 0.5rem;
@@ -94,7 +99,7 @@ nav li a:hover{
     height: 3.5rem;
 }
 
-header{
+header {
     background-color: var(--dark-grey);
     display: flex;
     flex-direction: row;
@@ -125,106 +130,118 @@ body::before {
     margin: auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: transparent; 
-    box-shadow: none; 
-    margin-top: 20px; 
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 20px;
     font-family: bahnschrift;
 }
 
 
-.info-section, .cart-section {
-    padding: 0; 
-    overflow: hidden; 
+.info-section,
+.cart-section {
+    padding: 0;
+    overflow: hidden;
 }
 
 .info-section {
-    background-color: var(--beige); 
-    width: 48%; 
-    margin-right: 60px; 
-    padding: 30px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: var(--beige);
+    width: 48%;
+    margin-right: 60px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .info-section h2 {
-    margin-bottom: 20px; 
-    font-size: 1.5em; 
+    margin-bottom: 20px;
+    font-size: 1.5em;
     font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .info-section label {
-    display: block; 
-    margin-bottom: 10px; 
-    font-weight: bold; 
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .info-section input {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 15px; 
-    border: 1px solid #ccc; 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
 }
 
 .info-section .form-group {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .info-section .form-group input {
-    flex: 1; 
+    flex: 1;
 }
 
 .info-section .newsletter {
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .info-section .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .info-section button {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-size: 1em; 
+    font-size: 1em;
 }
+
 .back {
-    display: inline-block; /* Gør linket til en blok, så det kan have padding og margin */
-    padding: 10px 20px; /* Tilføj padding for at gøre knappen større */
-    background-color: #ffcccb; /* Lyserød baggrundsfarve */
-    color: #000; /* Sort tekstfarve */
-    text-decoration: none; /* Fjern understregning fra linket */
-    border-radius: 5px; /* Afrundede hjørner */
-    border: none; /* Fjern standard border */
-    cursor: pointer; /* Gør musemarkøren til en pointer */
-    font-size: 1em; /* Skriftstørrelse */
-    text-align: center; /* Centrer teksten */
+    display: inline-block;
+    /* Gør linket til en blok, så det kan have padding og margin */
+    padding: 10px 20px;
+    /* Tilføj padding for at gøre knappen større */
+    background-color: #ffcccb;
+    /* Lyserød baggrundsfarve */
+    color: #000;
+    /* Sort tekstfarve */
+    text-decoration: none;
+    /* Fjern understregning fra linket */
+    border-radius: 5px;
+    /* Afrundede hjørner */
+    border: none;
+    /* Fjern standard border */
+    cursor: pointer;
+    /* Gør musemarkøren til en pointer */
+    font-size: 1em;
+    /* Skriftstørrelse */
+    text-align: center;
+    /* Centrer teksten */
 }
 
 .info-section .back {
-    background-color: #ffcccb; 
+    background-color: #ffcccb;
 }
 
 .info-section .continue {
-    background-color: #d4edda; 
+    background-color: #d4edda;
     font-family: 'bahnschrift', Arial, sans-serif;
 }
 
 .cart-section {
-    background-color: transparent; 
-    width: 48%; 
-    margin-left: 10px; 
+    background-color: transparent;
+    width: 48%;
+    margin-left: 10px;
 }
 
 .cart-top {
-    background-color: white; 
-    padding: 20px; 
+    background-color: white;
+    padding: 20px;
 }
 
 .cart-bottom {
-    background-color: #D9D9D9; 
-    padding: 20px; 
+    background-color: #D9D9D9;
+    padding: 20px;
 }
 
 .summary p {
@@ -265,20 +282,20 @@ input {
 .newsletter {
     display: flex;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .newsletter input[type="checkbox"] {
-    margin-right: 10px; 
-    width: 20px; 
-    height: 20px; 
-    cursor: pointer; 
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .newsletter label {
-    margin-left: 5px; 
-    font-size: 1em; 
-    cursor: pointer; 
+    margin-left: 5px;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .buttons {
@@ -312,7 +329,8 @@ table {
     margin-top: 10px;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -346,12 +364,13 @@ img {
     bottom: -20px;
     right: 320px;
     width: 100px;
-    transform: scale(1.5); /* Gør billedet 1,5 gange større */
+    transform: scale(1.5);
+    /* Gør billedet 1,5 gange større */
 }
 
 
 footer {
-    
+
     background-color: var(--dark-grey);
     position: absolute;
     bottom: -24%;
@@ -391,22 +410,22 @@ footer img {
 
 #toast-notification {
     font-family: bahnschrift;
-    visibility: hidden; 
-    opacity: 0; 
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
     padding: 15px;
-    z-index: 1000; 
-    transition: opacity 0.5s, visibility 0.5s; 
+    z-index: 1000;
+    transition: opacity 0.5s, visibility 0.5s;
 }
 
 
 #toast-notification.toast-visible {
-    visibility: visible; 
-    opacity: 1; 
+    visibility: visible;
+    opacity: 1;
 }
 
 .toast {
@@ -431,13 +450,27 @@ footer img {
 }
 
 @keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
 }
 
 @keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
 
 .toast-error {

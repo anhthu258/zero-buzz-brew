@@ -155,29 +155,17 @@ header {
     align-content: space-between;
 }
 
+.link a{
+    text-decoration: none;
+}
+
+.link p :hover{
+    color: #5642BA;
+}
 span {
     display: block;
 }
-.iconCart {
-    position: relative;
-    z-index: 1;
-}
 
-.totalQuantity {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 5;
-    font-size: x-large;
-    width: 35px;
-    height: 40px;
-    color: var(--dark-grey);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-10px) translateY(12px);
-    cursor: pointer;
-}
 .find-buzzy p {
     font-family: 'bahnschrift';
     font-weight: 100;
