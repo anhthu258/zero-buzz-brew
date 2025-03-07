@@ -3,10 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-h1, h2, h3 {
 
+h1, h2, h3 {
+    font-family: kookyCloud;
+    src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
 
+p {
+    font-family: kookycloud;
+    src: url(../fonts/kookyCloud/Hello-KookyCloud.otf);
+}
 
 @font-face {
     font-family: kookyCloud;
@@ -17,7 +23,6 @@ h1, h2, h3 {
     font-family: kookyCloud-extra;
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
-
 
 :root {
     --dark-grey: #222222;
@@ -143,12 +148,37 @@ main {
     text-align: left;
 }
 
-.produkt:hover h2,
-.produkt:hover p {
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 8px #FD0062; /* Mere tydelig skygge */
+.produkt h2,
+.produkt p {
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#lemon-burst:hover h2,
+#lemon-burst:hover p {
+    color: #000000;
+    text-shadow: 4px 4px 12px #ccff00; /* Kraftigere skygge */
     transform: scale(1.1);
-    opacity: 1;
+}
+
+#blueberry-twister:hover h2,
+#blueberry-twister:hover p {
+    color: #ffffff;
+    text-shadow: 4px 4px 12px #5642BA; /* Kraftigere skygge */
+    transform: scale(1.1);
+}
+
+#strawberry-punch:hover h2,
+#strawberry-punch:hover p {
+    color: #ffffff;
+    text-shadow: 6px 6px 12px #010101; /* Kraftigere skygge */
+    transform: scale(1.1);
+}
+
+#absolut-zero:hover h2,
+#absolut-zero:hover p {
+    color: #000000;
+    text-shadow: 4px 4px 12px #DDD4D1; /* Kraftigere skygge */
+    transform: scale(1.7);
 }
 
 #lemon-burst {
@@ -172,25 +202,26 @@ main {
 }
 
 #lemon-burst:hover {
-    background-image: url('/img/hover-lemon.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
 
 #blueberry-twister:hover {
-    background-image: url('/img/hover-blueberry.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
 
 #strawberry-punch:hover {
-    background-image: url('/img/strawberryhover.webp');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
+    opacity: 90%;
 }
 
 #absolut-zero:hover {
-    background-image: url('/img/hover-zero.png');
+    background-image: url('/img/doodle_exspanded.webp');
     background-size: cover;
     background-position: center;
 }
