@@ -148,6 +148,10 @@ header{
     flex-wrap: wrap;
     align-content: space-between;
 }
+.find-buzzy span{
+    display: block;
+}
+
 .find-buzzy p{
     font-family: 'bahnschrift';
     font-weight: 100;
