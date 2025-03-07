@@ -90,12 +90,12 @@ nav li a:hover {
     height: 3.5rem;
 }
 
-.iconCart{
+.iconCart {
     position: relative;
     z-index: 1;
 }
 
-.totalQuantity{
+.totalQuantity {
     position: absolute;
     top: 0;
     right: 0;
@@ -110,7 +110,7 @@ nav li a:hover {
     cursor: pointer;
 }
 
-.quantity button{
+.quantity button {
     border: none;
     width: 30px;
     height: 30px;
@@ -140,7 +140,7 @@ nav li a:hover {
     min-height: auto;
 }
 
-.container{
+.container {
     max-width: 100%;
     margin: auto;
     transition: transform 1s;
@@ -198,11 +198,11 @@ h2 {
     font-size: 1.5rem;
 }
 
-.rabatPris{
+.rabatPris {
     text-decoration: line-through;
 }
 
-.pris{
+.pris {
     color: var(--pink);
 }
 
@@ -233,11 +233,11 @@ h2 {
     cursor: pointer;
 }
 
-.cart{
+.cart {
     color: var(--dark-grey);
     position: fixed;
     top: 0;
-    right: -400px; /* Set initial value to hide the cart */
+    right: -400px;
     width: 400px;
     height: 100vh;
     background-color: var(--beige);
@@ -248,10 +248,14 @@ h2 {
     background-repeat: repeat-y;
     background-size: contain;
     z-index: 2;
-    transition: right 0.3s ease; /* Add transition for smooth animation */
+    transition: right 0.3s ease;
 }
 
-#cartHeader{
+.cart.open {
+    right: 0;
+}
+
+#cartHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -259,12 +263,12 @@ h2 {
     height: 80px;
 }
 
-#cartHeader img{
+#cartHeader img {
     width: 50px;
     cursor: pointer;
 }
 
-.cart h2{
+.cart h2 {
     font-family: kookyCloud;
     font-weight: 50;
     font-size: 60px;
@@ -275,7 +279,7 @@ h2 {
     align-items: center;
 }
 
-.cart .listCart .item{
+.cart .listCart .item {
     display: grid;
     grid-template-columns: 50px 1fr 70px;
     align-items: center;
@@ -287,17 +291,17 @@ h2 {
     width: 90%;
 }
 
-.cart .listCart img{
+.cart .listCart img {
     width: 65px;
     height: 100%;
     object-fit: cover;
 }
 
-.cart .listCart .item .name{
+.cart .listCart .item .name {
     font-weight: bold;
 }
 
-.cart .listCart .item .quantity{
+.cart .listCart .item .quantity {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -305,22 +309,21 @@ h2 {
     width: 65px;
 }
 
-.cart .listCart .item p{
-    display: block;
+.cart .listCart .item p {
     width: 50px;
     text-align: center;
 }
 
-.cart .listCart{
+.cart .listCart {
     padding: 20px;
     overflow: auto;
 }
 
-.cart .listCart::-webkit-scrollbar{
+.cart .listCart::-webkit-scrollbar {
     width: 0;
 }
 
-.cart .buttons div{
+.cart .buttons div {
     background-color: var(--darker-beige);
     height: 60px;
     display: flex;
@@ -330,13 +333,18 @@ h2 {
     justify-content: flex-end;
 }
 
-.cart .buttons a{
+.cart .buttons a {
     color: var(--dark-grey);
     text-decoration: none;
     padding: 15px;
 }
 
-.cart input{
+button {
+    position: relative;
+    z-index: 10; /* Sørg for, at knappen er over andre elementer */
+    pointer-events: auto; /* Sørg for, at knappen kan interageres med */
+}
+.cart input {
     width: 350px;
     height: 60px;
     padding: 5px;
@@ -347,11 +355,11 @@ h2 {
     font-weight: bold;
 }
 
-.cart .buttons .checkout{
+.cart .buttons .checkout {
     background-color: var(--light-green);
 }
 
-.cart .buttons .checkout:hover{
+.cart .buttons .checkout:hover {
     background-color: var(--neon-green);
 }
 

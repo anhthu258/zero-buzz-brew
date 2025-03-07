@@ -1,137 +1,135 @@
-let iconCart = document.querySelector('.iconCart');
-let cart = document.querySelector('.cart');
-let container = document.querySelector('.container');
-let close = document.querySelector('.close');
-let listCart = {}; // Initialize listCart
+document.addEventListener('DOMContentLoaded', function() {
+    let iconCart = document.querySelector('.iconCart');
+    let cart = document.querySelector('.cart');
+    let close = document.querySelector('.close');
+    let listCart = JSON.parse(localStorage.getItem('listCart')) || {};
 
-document.querySelector('.checkout a').addEventListener('click', function(event) {
-    cart.style.right = '-400px';
-    container.style.transform = 'translateX(0)';
-});
-
-
-iconCart.addEventListener('click', function() {
-    if (cart.style.right === '-400px' || cart.style.right === '') {
-        cart.style.right = '0';
-        container.style.transform = 'translateX(-400px)';
-    } else {
-        cart.style.right = '-400px';
-        container.style.transform = 'translateX(0)';
+    if (!iconCart || !cart || !close) {
+        console.error('Fejl: DOM-elementer ikke fundet!');
+        return;
     }
-});
 
-close.addEventListener('click', function() {
-    cart.style.right = '-400px';
-    container.style.transform = 'translateX(0)';
-});
-
-let products = null;
-
-fetch('product.json') //indhenter data fra json filen
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-        addDataToHTML();
-        checkCart(); // Check cart after fetching products
-        addCartToHTML(); // Update cart HTML after fetching products
+    // Åbn/luk kurv
+    iconCart.addEventListener('click', function() {
+        cart.classList.toggle('open');
     });
 
-function addDataToHTML() {  //tilføjer data til html
-    let listProducts = document.querySelector('.listProducts');  //fjerner default data fra html
-    listProducts.innerHTML = '';
+    close.addEventListener('click', function() {
+        cart.classList.remove('open');
+    });
 
-    if (products != null) { // hvis der er data i json filen, så tilføjes data til html
-        products.forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.innerHTML = 
-            `<img src="${product.image}" alt="">
-            <h2>${product.name}</h2>
-            <p class="pris">${product.price}</p>
-            <button onclick="addCart(${product.id})">Tilføj til kurv</button>`;
-            listProducts.appendChild(newProduct);
+    // Hent produkter fra JSON
+    fetch("product.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            products = data;
+            addCartToHTML();
+        })
+        .catch(error => {
+            console.error('Fejl ved indlæsning af produkter:', error);
         });
-    }
-}
 
-//anvender cookies således at .cart ikke nulstilles
-function checkCart() {
-    var cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('listCart='));
-    
-    if (cookieValue) {
-        listCart = JSON.parse(cookieValue.split('=')[1]);
-    }
-}
-
-function addCart($idProduct) {
-    let productsCopy = JSON.parse(JSON.stringify(products));
-    
-    if (!listCart[$idProduct]) { // hvis produktet ikke er i kurven
-        let dataProduct = productsCopy.filter(product => product.id == $idProduct)[0];
-        listCart[$idProduct] = dataProduct;
-        listCart[$idProduct].quantity = 1;
-    } else {                   
-        listCart[$idProduct].quantity++; // hvis produktet er i kurven bliver der tilføjet 1 til quantity
+    // Tilføj produkt til kurv
+    function addCart(idProduct) {
+        console.log("addCart kaldt med idProduct:", idProduct);
+        if (!listCart[idProduct]) {
+            let product = products.find(p => p.id == parseInt(idProduct));
+            if (product) {
+                listCart[idProduct] = { ...product, quantity: 1 };
+            }
+        } else {
+            listCart[idProduct].quantity++;
+        }
+        saveCart();
+        addCartToHTML();
     }
 
-    // gemmer data i cookies
-    let date = new Date();
-    date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
-    let expires = "; expires=" + date.toUTCString();
-    document.cookie = "listCart=" + JSON.stringify(listCart) + expires + "; path=/";
-    addCartToHTML();
-}
+    // Gem kurv i localStorage
+    function saveCart() {
+        localStorage.setItem('listCart', JSON.stringify(listCart));
+    }
 
-function addCartToHTML() {
-    let listCartHTML = document.querySelector('.listCart');
-    listCartHTML.innerHTML = '';
+    // Opdater kurvens visning
+    function addCartToHTML() {
+        let listCartHTML = document.querySelector('.listCart');
+        if (!listCartHTML) {
+            console.error('Fejl: .listCart ikke fundet!');
+            return;
+        }
 
-    let totalHTML = document.querySelector('.totalQuantity');
-    let totalQuantity = 0;
+        listCartHTML.innerHTML = '';
+        let totalQuantity = 0;
 
-    if (listCart) {
         Object.values(listCart).forEach(product => {
             if (product) {
-                let newCart = document.createElement('div');
-                newCart.classList.add('item');
-                newCart.innerHTML = 
-                `<img src="${product.image}" alt="">
-                <div class="content">
-                    <h3 class="name">${product.name}</h3>
-                    <p class="price">${product.price}</p>
-                </div>
-                <section class="quantity">
-                    <button onclick="changeQuantity(${product.id}, '-')">-</button>
-                    <p>${product.quantity}</p>
-                    <button onclick="changeQuantity(${product.id}, '+')">+</button>
-                </section>`;
-                listCartHTML.appendChild(newCart);
+                let newCartItem = document.createElement('div');
+                newCartItem.classList.add('item');
+                newCartItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="content">
+                        <h3 class="name">${product.name}</h3>
+                        <p class="price">DKK ${product.price}</p>
+                    </div>
+                    <section class="quantity">
+                        <button class="changeQuantityButton" data-product-id="${product.id}" data-type="-">-</button>
+                        <p>${product.quantity}</p>
+                        <button class="changeQuantityButton" data-product-id="${product.id}" data-type="+">+</button>
+                    </section>
+                `;
+                listCartHTML.appendChild(newCartItem);
                 totalQuantity += product.quantity;
             }
         });
+
+        let totalQuantityElement = document.querySelector('.totalQuantity');
+        if (totalQuantityElement) {
+            totalQuantityElement.innerText = totalQuantity;
+        }
+
+        // Tilføj event listeners til knapperne "+" og "-"
+        let changeQuantityButtons = document.querySelectorAll('.changeQuantityButton');
+        changeQuantityButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                let idProduct = this.dataset.productId;
+                let type = this.dataset.type;
+                changeQuantity(idProduct, type);
+            });
+        });
     }
 
-    totalHTML.innerText = totalQuantity;
-}
-
-function changeQuantity($idProduct, $type) {
-    switch ($type) {
-        case '+':
-            listCart[$idProduct].quantity++;
-            break;
-        case '-':
-            listCart[$idProduct].quantity--;
-
-            // hvis quantity er 0, så fjernes produktet fra kurven
-            if (listCart[$idProduct].quantity <= 0) {
-                delete listCart[$idProduct];
+    // Ændr antal af en vare i kurven
+    function changeQuantity(idProduct, type) {
+        if (listCart[idProduct]) {
+            switch (type) {
+                case '+':
+                    listCart[idProduct].quantity++;
+                    break;
+                case '-':
+                    listCart[idProduct].quantity--;
+                    if (listCart[idProduct].quantity <= 0) {
+                        delete listCart[idProduct];
+                    }
+                    break;
             }
-            break;
-    
-        default:
-            break;
+            saveCart();
+            addCartToHTML();
+        }
     }
-    addCartToHTML();
-}
+
+    // Hent alle "Tilføj til kurv"-knapper
+    let addToCartButtons = document.querySelectorAll('.addToCartButton');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Hent produkt-id fra data-attributten
+            let idProduct = this.closest('.grid-item').dataset.productId;
+            addCart(idProduct);
+        });
+    });
+});
+
