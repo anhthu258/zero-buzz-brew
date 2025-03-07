@@ -180,6 +180,18 @@ body::before {
     cursor: pointer;
     font-size: 1em; 
 }
+.back {
+    display: inline-block; /* Gør linket til en blok, så det kan have padding og margin */
+    padding: 10px 20px; /* Tilføj padding for at gøre knappen større */
+    background-color: #ffcccb; /* Lyserød baggrundsfarve */
+    color: #000; /* Sort tekstfarve */
+    text-decoration: none; /* Fjern understregning fra linket */
+    border-radius: 5px; /* Afrundede hjørner */
+    border: none; /* Fjern standard border */
+    cursor: pointer; /* Gør musemarkøren til en pointer */
+    font-size: 1em; /* Skriftstørrelse */
+    text-align: center; /* Centrer teksten */
+}
 
 .info-section .back {
     background-color: #ffcccb; 
