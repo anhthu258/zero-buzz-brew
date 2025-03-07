@@ -5,17 +5,22 @@
 }
 
 @font-face {
-    font-family: kookyCloud;
+    font-family: 'kookyCloud';
     src: url(../fonts/KookyCloud/Hello-KookyCloud.otf);
 }
 
 @font-face {
-    font-family: kookyCloud-extra;
+    font-family: 'kookyCloud-extra';
     src: url(./fonts/KookyCloud/Hello-KookyCloud-Extra.otf);
 }
 
-body {
-    font-family: bahnscript, sans-serif;
+@font-face {
+    font-family: 'bahnschrift';
+    src: url(/fonts/BAHNSCHRIFT.TTF);
+}
+
+body p{
+    font-family: bahnschrift, sans-serif;
 }
 
 :root {
@@ -195,6 +200,7 @@ main::before {
 }
 
 h2 {
+    font-family: bahnschrift;
     font-size: 1.5rem;
 }
 
